@@ -1,5 +1,5 @@
-# 01 - Thread Creation 
-# C++ Thread Creation: From Basics to Advanced
+
+# C++ Thread Creation
 
 This repository contains examples of how to create and manage threads in C++, from the older C++11 standard up to modern C++20 features.
 
@@ -34,7 +34,7 @@ join(): The main thread halts and waits until t1 completely finishes its executi
 
 detach(): Separates the thread from the std::thread object, allowing it to execute completely independently in the background.
 
-#2.Intermediate: Passing Arguments & Lambda Functions
+## 2.Intermediate: Passing Arguments & Lambda Functions
 
 In real-world applications, you usually need to pass data to a thread. C++ threads accept arguments easily, and modern C++ frequently uses Lambdas (anonymous functions) inline.
 
@@ -67,7 +67,7 @@ int main() {
 
 Crucial Rule: Arguments passed to std::thread are copied by default into internal storage accessible by the new thread. If you want to pass a value by reference, you must wrap it in std::ref(variable).
 
-#3. Advanced: Member Functions & Functors
+##3. Advanced: Member Functions & Functors
 Sometimes your thread needs to execute a method inside a specific class instance, or an object acting like a function (a functor).
 
 Code Example: 03_member_functions.cpp
@@ -103,7 +103,7 @@ It automatically calls .join() in its destructor when it goes out of scope.
 
 It introduces built-in cooperative cancellation via stop tokens.
 
-#Code Example: 04_modern_jthread.cpp
+##Code Example: 04_modern_jthread.cpp
 
 ```cpp
 #include <iostream>
